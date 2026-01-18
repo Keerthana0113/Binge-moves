@@ -31,7 +31,7 @@ body{
     font-size:2.4rem;          /* BIGGER LOGO */
     font-weight:900;
     letter-spacing:4px;
-    color:#e50914;
+    color:white;
     cursor:pointer;
 }
 
@@ -263,3 +263,4 @@ button:hover{
     color:#aaa;
     background:rgba(0,0,0,0.6);
 }
+
