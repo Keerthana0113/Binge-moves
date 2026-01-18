@@ -96,6 +96,29 @@
 
 <script src="binge.js"></script>
 <script>
+    const params = new URLSearchParams(window.location.search);
+    const movie = params.get("movie");
+    const theater = params.get("theater");
+    const scroll = params.get("scroll");
+
+    // Auto scroll to movies section
+    if (scroll === "true") {
+        setTimeout(() => {
+            const section = document.getElementById("movies");
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 500);
+    }
+
+    // Auto open booking modal
+    if (movie && theater) {
+        setTimeout(() => {
+            bookSeat(movie + " @ " + theater);
+        }, 800);
+    }
+</script>    
+<script>
     if (!localStorage.getItem("loggedIn")) {
         window.location.href = "login.html";
     }
@@ -107,5 +130,6 @@
 
 </body>
 </html>
+
 
 
