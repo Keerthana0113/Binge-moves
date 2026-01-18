@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theaters</title>
+    <link rel="stylesheet" href="binge.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">BINGE</div>
+    <nav>
+        <a href="movies.html">Movies</a>
+        <a href="theaters.html">Theaters</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </nav>
+</header>
+
+  <section>
+    <h2 class="section-title">Available Theaters</h2>
+
+    <div class="movies-container">
+
+        <!-- THEATER 1 -->
+        <div class="movie-card">
+            <h3>PVR Cinemas</h3>
+            <p>Bangalore</p>
+            <select id="movie1">
+                <option value="Kantara">Kantara</option>
+                <option value="Pathaan">Pathaan</option>
+                <option value="Jawan">Jawan</option>
+            </select>
+            <button type="button" onclick="goToBooking('PVR Cinemas','movie1')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 2 -->
+        <div class="movie-card">
+            <h3>INOX</h3>
+            <p>Mysore</p>
+            <select id="movie2">
+                <option value="Kantara">Kantara</option>
+                <option value="Jawan">Jawan</option>
+                <option value="Pathaan">Pathaan</option>
+            </select>
+            <button type="button" onclick="goToBooking('INOX','movie2')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 3 -->
+        <div class="movie-card">
+            <h3>Cinepolis</h3>
+            <p>Mangalore</p>
+            <select id="movie3">
+                <option value="Pathaan">Pathaan</option>
+                <option value="Jawan">Jawan</option>
+                <option value="Kantara">Kantara</option>
+            </select>
+            <button type="button" onclick="goToBooking('Cinepolis','movie3')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 4 -->
+        <div class="movie-card">
+            <h3>Urvashi Theatre</h3>
+            <p>Bangalore</p>
+            <select id="movie4">
+                <option value="Kantara">Kantara</option>
+                <option value="Jawan">Jawan</option>
+            </select>
+            <button type="button" onclick="goToBooking('Urvashi Theatre','movie4')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 5 -->
+        <div class="movie-card">
+            <h3>Sandhya Theatre</h3>
+            <p>Bangalore</p>
+            <select id="movie5">
+                <option value="Pathaan">Pathaan</option>
+                <option value="Jawan">Jawan</option>
+            </select>
+            <button type="button" onclick="goToBooking('Sandhya Theatre','movie5')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 6 -->
+        <div class="movie-card">
+            <h3>Galaxy Cinemas</h3>
+            <p>Udupi</p>
+            <select id="movie6">
+                <option value="Kantara">Kantara</option>
+                <option value="Pathaan">Pathaan</option>
+            </select>
+            <button type="button" onclick="goToBooking('Galaxy Cinemas','movie6')">
+             Book Movies
+            </button>
+        </div>
+
+        <!-- THEATER 7 -->
+        <div class="movie-card">
+            <h3>Vaibhav Theatre</h3>
+            <p>Hubli</p>
+            <select id="movie7">
+                <option value="Jawan">Jawan</option>
+                <option value="Kantara">Kantara</option>
+            </select>
+            <button type="button" onclick="goToBooking('Vaibhav Theatre','movie7')">
+             Book Movies
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<footer class="site-footer">
+    © 2026 Binge. Academic project only.  
+    Netflix is a registered trademark of Netflix, Inc.
+</footer>
+<script src="binge.js"></script>
+</body>
+</html>

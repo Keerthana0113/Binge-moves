@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binge</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            background:black;
+            overflow:hidden;
+        }
+
+        .logo{
+            font-size:4.2rem;
+            font-weight:800;
+            letter-spacing:6px;
+            color:white;
+            animation: glowIn 3s ease forwards;
+        }
+
+        .tagline{
+            margin-top:10px;
+            font-size:0.9rem;
+            letter-spacing:2px;
+            color:#aaa;
+            opacity:0;
+            animation: fadeUp 1.5s ease forwards;
+            animation-delay:1.5s;
+        }
+
+        @keyframes glowIn{
+            0%{
+                transform:scale(0.8);
+                opacity:0;
+                text-shadow:none;
+            }
+            60%{
+                opacity:1;
+                transform:scale(1.1);
+                text-shadow:0 0 25px rgb(253, 250, 251);
+            }
+            100%{
+                transform:scale(1);
+                text-shadow:0 0 10px rgb(255, 255, 255);
+            }
+        }
+
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:translateY(10px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        .copyright{
+            position:absolute;
+            bottom:15px;
+            font-size:11px;
+            color:#666;
+            text-align:center;
+            padding:0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logo">BINGE</div>
+<div class="tagline">STREAM · BOOK · ENJOY</div>
+
+<div class="copyright">
+    © 2026 Binge. This project is for academic use only.  
+    Not affiliated with or endorsed by Netflix.
+</div>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "login.html";
+    }, 3500);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* ---------- BODY ---------- */
+body{
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)),
+    url("https://springboard-cdn.appadvice.com/wp-content/appadvice-v2-media/2016/11/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg")
+    no-repeat center/cover;
+    min-height:100vh;
+    color:white;
+    padding-top:80px;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.7);
+    z-index:1000;
+}
+.logo{
+    font-size:2.4rem;          /* BIGGER LOGO */
+    font-weight:900;
+    letter-spacing:4px;
+    color:white;
+    cursor:pointer;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:#ff4c4c;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    font-weight:800;
+    max-width:800px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin:15px 0 25px;
+    color:#ddd;
+}
+
+.hero-btn{
+    padding:12px 30px;
+    font-size:1.1rem;
+    border-radius:8px;
+}
+
+
+/* ---------- COMMON ---------- */
+.section-title{
+    text-align:center;
+    margin:40px 0 20px;
+    font-size:2.2rem;
+    font-weight:700;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    display:block;
+    width:80px;
+    height:4px;
+    background:#e50914;
+    margin:10px auto 0;
+    border-radius:5px;
+}
+
+
+/* ---------- MOVIES / THEATERS ---------- */
+.movies-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:20px;
+}
+
+.movie-card{
+    background:white;
+    color:black;
+    width:220px;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.movie-card img{
+    width:100%;
+    height:280px;
+    border-radius:8px;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px) scale(1.05);
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}
+
+button{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    background:#ff4c4c;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e63939;
+}
+
+/* ---------- LOGIN PAGE ---------- */
+.login-body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:15px;
+    width:300px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.login-card h2{
+    margin-bottom:20px;
+}
+
+.login-card input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+/* ---------- MODAL ---------- */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+}
+
+.modal-content{
+    background:white;
+    color:black;
+    width:300px;
+    margin:100px auto;
+    padding:20px;
+    border-radius:10px;
+}
+.modal-content form{
+    display:flex;
+    flex-direction:column;
+    
+    box-sizing: border-box;
+}
+.modal-content input ,textarea{
+    margin-bottom:2px;
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+/* ---------- SEATS ---------- */
+.seats-grid{
+    display:grid;
+    grid-template-columns:repeat(5,40px);
+    gap:8px;
+    justify-content:center;
+}
+
+.seat {
+    background: #ffffff;
+    color: #000;
+    width: 40px;          /* fixed width */
+    height: 40px;         /* fixed height */
+    display: flex;        /* enable flexbox */
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+
+.seat.selected{
+    background:green;
+}
+.poster{
+    position:relative;
+}
+
+.poster img{
+    width:100%;
+    height:280px;
+    border-radius:10px;
+}
+
+.movie-title{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:10px;
+    background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color:white;
+    font-weight:bold;
+    border-radius:0 0 10px 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+    }
+    .hero h1{
+        font-size:2rem;
+    }
+}
+@media(max-width:480px){
+    .movies-container{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+.site-footer{
+    margin-top:40px;
+    padding:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    background:rgba(0,0,0,0.6);
+}
+/* Seat Layout */
+.seats-grid {
+    align-items: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+/* Default seat */
+.seat {
+    background: #ffffff;
+    color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+/* Selected seat (before booking) */
+.seat.selected {
+    background: #ffcc00;
+    border-color: #ffcc00;
+}
+
+/* Booked seat (after confirm) */
+.seat.booked {
+    background: #2ecc71;
+    color: #fff;
+    border-color: #2ecc71;
+    cursor: not-allowed;
+}
+
+#printBtn {
+    padding: 8px 16px;
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
